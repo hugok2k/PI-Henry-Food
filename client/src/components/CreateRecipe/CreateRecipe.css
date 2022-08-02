@@ -1,0 +1,151 @@
+.create-recipe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.create-recipe-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 500px;
+  height: auto;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 4px;
+  color: rgb(68, 68, 68);
+  margin-top: 20px;
+}
+.label-main {
+  text-align: left;
+  width: 400px;
+  margin-bottom: 8px;
+}
+.input-form-recipe {
+  width: 400px;
+  height: 40px;
+  border-radius: 6px;
+  border: solid 1px #ccc;
+  padding-left: 10px;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.create-recipe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.img-form {
+  width: 410px;
+  margin-bottom: 10px;
+  /* height: 100%; */
+}
+.label-checkbox {
+  font-size: 14px;
+  padding-right: 10px;
+}
+.select-diets-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 410px;
+  height: 100px;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+.input-checkbox {
+  width: 15px;
+  height: 15px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  margin-right: 10px;
+}
+
+.label-main {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.button-submit {
+  width: 80px;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  background-color: var(--color-primary-500);
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button-submit:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.3s;
+}
+
+.error-message,
+.error-message-summary,
+.error-message-diets,
+.error-message-setps {
+  font-size: 14px;
+  position: absolute;
+  color: red;
+}
+.error-message {
+  margin-bottom: 904px;
+  margin-right: 100px;
+}
+.error-message-summary {
+  margin-bottom: 498px;
+  margin-right: 134px;
+}
+.error-message-diets {
+  margin-top: 388px;
+  margin-right: 210px;
+}
+.error-message-setps {
+  margin-top: 738px;
+  margin-right: 210px;
+}
+
+.btnDisabled {
+  width: 80px;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(78, 78, 78);
+  background-color: rgb(197, 197, 197);
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.btn-back-form {
+  position: absolute;
+  padding: 16px 30px;
+  background: var(--color-primary-500);
+  color: var(--color-secondary-900);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 108px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 0px 0px 924px 445px;
+}
+
+.btn-back-form:hover {
+  background: #fff;
+  color: #000;
+}

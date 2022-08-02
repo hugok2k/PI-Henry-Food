@@ -1,0 +1,9 @@
+export const GET_ALL_RECIPE = 'GET_ALL_RECIPE';
+export const GET_RECIPE_DETAIL = 'GET_RECIPE_DETAIL';
+export const GET_RECIPE_NAME = 'GET_RECIPE_NAME';
+export const CREATE_RECIPE = 'CREATE_RECIPE';
+export const LOCALHOST = 'http://localhost:3001/';
+export const ORDER_RECIPE = 'ORDER_RECIPE';
+export const ORDER_HEALTH_SCORE = 'ORDER_HEALTH_SCORE';
+export const GET_LIST_DIETS = 'GET_LIST_DIETS';
+export const FILTER_DIETS = 'FILTER_DIETS';

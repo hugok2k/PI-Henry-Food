@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: url(https://img.freepik.com/premium-vector/food-doodle-set_160308-239.jpg?w=2000);
+  background-size: cover;
+}
+
+.btn {
+  margin: 0;
+  padding: 16px 30px;
+  background: var(--color-primary-500);
+  color: var(--color-secondary-900);
+  font-size: 1rem;
+  font-weight: 400;
+  /* line-height: normal; */
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #fff;
+  color: #000;
+}

@@ -10,9 +10,6 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
   const listDiets = useSelector((state) => state.listDiets);
   const lis = listDiets.map((e) => e.name);
 
-  // allRecipes.filter((e) => {
-  //   return e.diets?.includes(action.payload.toLowerCase())});
-
   useEffect(() => {
     if (listDiets.length === 0) {
       dispatch(getListDiets());
@@ -27,8 +24,7 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(getRecipeName(input));
-    setCurrentPage(1);
-    setInput('');
+    // setInput('');
   };
 
   const handleOrder = (e) => {
@@ -45,7 +41,6 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
 
   const handleFilterDiets = (e) => {
     dispatch(filterDiets(e.target.value));
-    // setOrder(e.target.value);
     setCurrentPage(1);
   };
 
@@ -57,7 +52,7 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
         </button>
       </Link>
       <select onChange={(e) => handleOrder(e)} className="menu-order">
-        <option value="random">Order</option>
+        <option value="orderR">Order</option>
         <option value="A-Z">A-Z</option>
         <option value="Z-A">Z-A</option>
       </select>
@@ -85,7 +80,7 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
         <option value="L-H">Low - High</option>
       </select>
       <select onChange={(e) => handleFilterDiets(e)} className="menu-filter-recipe">
-        <option value="random">Filter diets</option>
+        <option value="allDiets">All Diets</option>
         {lis.map((element) => (
           <option key={element} value={element}>
             {element}

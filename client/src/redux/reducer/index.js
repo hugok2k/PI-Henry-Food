@@ -6,18 +6,14 @@ import {
   ORDER_RECIPE,
   ORDER_HEALTH_SCORE,
   GET_LIST_DIETS,
-  FILTER_DIETS,
-  CREATE_RECIPE
+  FILTER_DIETS
 } from '../actions/myconst';
-
-// buscame en recipe y guardalo en recipfiltrado
 
 const initialState = {
   recipes: [],
-  recipes2: [],
+  recipesOriginal: [],
   infoRecipes: {},
-  listDiets: [],
-  createRes: {}
+  listDiets: []
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -26,12 +22,12 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         recipes: action.payload,
-        recipes2: action.payload
+        recipesOriginal: action.payload
       };
     case GET_RECIPE_NAME:
       return {
         ...state,
-        recipes: action.payload
+        recipesOriginal: action.payload
       };
     case GET_RECIPE_DETAIL:
       return {
@@ -41,7 +37,7 @@ const rootReducer = (state = initialState, action) => {
     case ORDER_RECIPE:
       return {
         ...state,
-        recipes2: state.recipes2.sort((a, b) => {
+        recipes: state.recipes.sort((a, b) => {
           if (action.payload === 'A-Z') {
             if (a.name < b.name) return -1;
             if (b.name < a.name) return 1;
@@ -56,7 +52,7 @@ const rootReducer = (state = initialState, action) => {
     case ORDER_HEALTH_SCORE:
       return {
         ...state,
-        recipes2: state.recipes2.sort((a, b) => {
+        recipes: state.recipes.sort((a, b) => {
           if (action.payload === 'L-H') {
             if (a.healthScore < b.healthScore) return -1;
             if (b.healthScore < a.healthScore) return 1;
@@ -74,16 +70,13 @@ const rootReducer = (state = initialState, action) => {
         listDiets: action.payload
       };
     case FILTER_DIETS:
+      const filterRecipeVar = state.recipesOriginal;
+      const recipesFilter = filterRecipeVar.filter((e) => {
+        return e.diets?.includes(action.payload);
+      });
       return {
         ...state,
-        recipes: state.recipes.filter((e) => {
-          return e.diets?.includes(action.payload.toLowerCase());
-        })
-      };
-    case CREATE_RECIPE:
-      return {
-        ...state,
-        createRes: action.payload
+        recipes: action.payload === 'allDiets' ? filterRecipeVar : recipesFilter
       };
     default:
       return state;
@@ -91,3 +84,16 @@ const rootReducer = (state = initialState, action) => {
 };
 
 export default rootReducer;
+
+/*
+      const recipesAZ = state.recipes.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (b.name < a.name) return 1;
+        return 0;
+      });
+      const recipesZA = state.recipes.sort((a, b) => {
+        if (b.name < a.name) return -1;
+        if (a.name < b.name) return 1;
+        return 0;
+      });
+*/

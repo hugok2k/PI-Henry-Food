@@ -5,15 +5,14 @@ import Recipe from '../Recipe';
 import './Recipes.css';
 import { Paginate } from '../Paginate';
 import SearchBar from '../SearchBar';
-// import { Link } from 'react-router-dom';
 
 export default function Recipes() {
   const dispatch = useDispatch();
   const recipes = useSelector((state) => state.recipes);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 9;
-  const allRecipesPage = currentPage * postsPerPage; // 9, 18, 27, 36, 45, 54, 63, 72
-  const indexOfFirstPost = allRecipesPage - postsPerPage; // 0, 9, 18, 27, 36, 45, 54, 63, 72
+  const allRecipesPage = currentPage * postsPerPage;
+  const indexOfFirstPost = allRecipesPage - postsPerPage;
   const currentPosts = recipes.slice(indexOfFirstPost, allRecipesPage);
   const totalPages = Math.ceil(recipes.length / postsPerPage);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -48,7 +47,7 @@ export default function Recipes() {
     </>
   ) : (
     <div className="container-loading">
-      <div class="lds-ring">
+      <div className="lds-ring">
         <div className="lds-ring-child"></div>
         <div className="lds-ring-child"></div>
         <div className="lds-ring-child"></div>

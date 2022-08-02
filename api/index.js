@@ -25,15 +25,11 @@ const dietsDb = [
   'gluten free',
   'ketogenic',
   'lacto ovo vegetarian',
-  // 'lacto vegetarian',
-  // 'low fodmap',
-  // 'ovo vegetarian',
   'fodmap friendly',
   'paleolithic',
-  'pescetarian',
+  'pescatarian',
   'primal',
   'vegan',
-  // 'vegetarian',
   'whole 30'
 ];
 

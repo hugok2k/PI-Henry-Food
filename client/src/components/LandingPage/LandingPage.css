@@ -9,14 +9,13 @@
   background-size: cover;
 }
 
-.btn {
-  margin: 0;
+.btn-landing-page {
+  margin-top: 30px;
   padding: 16px 30px;
-  background: var(--color-primary-500);
-  color: var(--color-secondary-900);
+  background: #000;
+  color: #fff;
   font-size: 1rem;
   font-weight: 400;
-  /* line-height: normal; */
   border: 0;
   border-radius: 0.4rem;
   box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
@@ -24,7 +23,22 @@
   text-decoration: none;
   transition: 0.3s;
 }
-.btn:hover {
-  background: #fff;
+.btn-landing-page:hover {
+  background: var(--color-primary-500);
   color: #000;
+}
+.welcome-title,
+.welcome-subtitle {
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(0, 0, 0, 0.766);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.welcome-title {
+  font-size: 68px;
+}
+.welcome-subtitle {
+  font-size: 24px;
 }

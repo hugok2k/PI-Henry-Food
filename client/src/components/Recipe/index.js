@@ -12,7 +12,7 @@ export default function Recipe(recipe) {
         <h3>{name}</h3>
         <img className="recipe-img" src={image} alt={name} />
         <p className="dietsList">{dietsList}</p>
-        <p className="healthscore">
+        <p className="health-score">
           Health Score:{' '}
           <span className={healthScore > 65 ? 'hGreen' : healthScore < 40 ? 'hRed' : 'hOrange'}>{healthScore}</span>
         </p>

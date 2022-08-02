@@ -5,8 +5,10 @@ import './LandingPage.css';
 export default function LandingPage() {
   return (
     <div className="container">
+      <span className="welcome-title">WHAT TO COOK TONIGHT</span>
+      <span className="welcome-subtitle">Fast, fresh, and foolproof</span>
       <Link to="/home">
-        <button className="btn">Enter Site</button>
+        <button className="btn-landing-page">Enter Site</button>
       </Link>
     </div>
   );

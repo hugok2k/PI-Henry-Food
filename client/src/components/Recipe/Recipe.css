@@ -1,12 +1,12 @@
 .recipe-container {
   display: flex;
-  padding: 10px;
-  margin: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 300px;
+  /* padding: 10px; */
+  margin: 20px;
+  width: 330px;
+  height: 442px;
   background-color: #f5f5f5;
   box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
   text-align: center;
@@ -17,15 +17,21 @@
   box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.8);
   transform: scale(1.05);
 }
-.recipe-img {
-  width: 60%;
-}
 
 .health-score {
-  margin: 0;
+  /* margin: 0; */
 }
 .dietsList {
-  margin: 0;
+  /* margin: 0; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-secondary-900);
+  width: 310px;
+  height: 80px;
+  text-align: center;
+  font-size: 12px;
 }
 
 .hGreen {
@@ -41,4 +47,51 @@
 a:visited,
 a:link {
   color: #000;
+}
+.recipe-card-title {
+  font-size: 19px;
+  font-weight: bold;
+  width: 292px;
+  height: 40px;
+}
+.container-recipe-image {
+  /*   border: 2px solid red;
+  width: 400px;
+  height: 100px;
+  padding: 0;
+  margin: 0; */
+}
+.recipe-img {
+  width: 330px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px 6px 0px 0px;
+}
+.container-recipe-card-title {
+  margin-top: 20px;
+  width: 292px;
+  height: 82px;
+}
+.container-circle-hea {
+  position: absolute;
+  margin: 384px 0px 0px 276px;
+}
+.circle-hea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--color-secondary-900);
+  color: #000;
+  font-size: 20px;
+  background-color: var(--color-primary-600);
+  transition: 0.3s;
+}
+
+.circle-hea:hover {
+  background-color: #f5f5f5;
+  transition: 0.3s;
 }

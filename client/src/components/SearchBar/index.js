@@ -47,9 +47,14 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
   };
 
   const handleOrderHealth = (e) => {
-    dispatch(orderHealthScore(e.target.value));
-    setOrder(e.target.value);
-    setCurrentPage(1);
+    if (e.target.value === 'random') {
+      dispatch(getAllRecipes());
+      setCurrentPage(1);
+    } else {
+      dispatch(orderHealthScore(e.target.value));
+      setOrder(e.target.value);
+      setCurrentPage(1);
+    }
   };
 
   const handleFilterDiets = (e) => {

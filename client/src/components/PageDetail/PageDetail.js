@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPageDetail } from '../../redux/actions';
+import { getPageDetail, deleteRecipe } from '../../redux/actions';
 import './PageDetail.css';
 import { useHistory } from 'react-router-dom';
 
@@ -12,6 +12,12 @@ export default function PageDetail(props) {
   useEffect(() => {
     dispatch(getPageDetail(id));
   }, [dispatch, id]);
+
+  const handleDelete = () => {
+    dispatch(deleteRecipe(id));
+    alert('Recipe deleted');
+    history.push('/home');
+  };
 
   const infoRecipes = useSelector((state) => state.infoRecipes);
   return (
@@ -35,6 +41,11 @@ export default function PageDetail(props) {
             <strong>{e.number}</strong> - {e.step}
           </p>
         ))}
+        {id.length > 15 ? (
+          <button className="recipe-delete" onClick={() => handleDelete()}>
+            DELETE
+          </button>
+        ) : null}
       </div>
     </div>
   );

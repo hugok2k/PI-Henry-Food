@@ -81,3 +81,22 @@
   width: 556px;
   height: 370px;
 }
+
+.recipe-delete {
+  margin-top: 30px;
+  padding: 16px 30px;
+  background: rgb(189, 0, 0);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 0;
+  border-radius: 0.4rem;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.recipe-delete:hover {
+  background: #fff;
+  color: rgb(255, 0, 0);
+}

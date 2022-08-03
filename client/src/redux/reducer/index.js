@@ -84,16 +84,3 @@ const rootReducer = (state = initialState, action) => {
 };
 
 export default rootReducer;
-
-/*
-      const recipesAZ = state.recipes.sort((a, b) => {
-        if (a.name < b.name) return -1;
-        if (b.name < a.name) return 1;
-        return 0;
-      });
-      const recipesZA = state.recipes.sort((a, b) => {
-        if (b.name < a.name) return -1;
-        if (a.name < b.name) return 1;
-        return 0;
-      });
-*/

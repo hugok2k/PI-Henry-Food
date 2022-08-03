@@ -7,14 +7,10 @@ const { API_KEY } = process.env;
 const getApiSpoon = (next) => {
   return (
     axios
-      .get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
-      // .get(`https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5`)
+      // .get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
+      .get(`https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5`)
       .then((apiSpoon) => {
         const resultFilter = apiSpoon.data.results.map((e) => {
-          /*  if (e.vegetarian && !e.diets.includes('vegetarian')) e.diets.push('vegetarian');
-          if (e.vegan && !e.diets.includes('vegan')) e.diets.push('vegan');
-          if (e.glutenFree && !e.diets.includes('gluten free')) e.diets.push('gluten free');
-          if (e.dairyFree && !e.diets.includes('dairy free')) e.diets.push('dairy free');  */
           return {
             id: e.id,
             name: e.title,

@@ -26,12 +26,6 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-/* router.get('/', async (req, res, next) => {
-  const { name } = req.query;
-  const dbRecipes = await getConcat(next);
-  return res.send(dbRecipes);
-}); */
-
 router.get('/:id', async (req, res, next) => {
   const id = req.params.id;
   const idRecipes = await getIdRecipes(id, next);
@@ -60,19 +54,19 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-router.delete('/id:', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
   const id = req.params.id;
-  // Recipe.destroy({
-  //   where: {
-  //     id
-  //   }
-  // })
-  //   .then(() => {
-  //     res.send('Recipe deleted');
-  //   })
-  //   .catch((error) => {
-  //     next(error);
-  //   });
+  Recipe.destroy({
+    where: {
+      id
+    }
+  })
+    .then(() => {
+      res.send('Recipe deleted');
+    })
+    .catch((error) => {
+      next(error);
+    });
 });
 
 module.exports = router;

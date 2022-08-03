@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRecipeName, orderRecipes, orderHealthScore, getListDiets, filterDiets } from '../../redux/actions/';
+import {
+  getRecipeName,
+  orderRecipes,
+  orderHealthScore,
+  getListDiets,
+  filterDiets,
+  getAllRecipes
+} from '../../redux/actions/';
 import './SearchBar.css';
 import { Link } from 'react-router-dom';
 
@@ -24,13 +31,19 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(getRecipeName(input));
-    // setInput('');
+    setInput('');
+    setCurrentPage(1);
   };
 
   const handleOrder = (e) => {
-    dispatch(orderRecipes(e.target.value));
-    setOrder(e.target.value);
-    setCurrentPage(1);
+    if (e.target.value === 'orderR') {
+      dispatch(getAllRecipes());
+      setCurrentPage(1);
+    } else {
+      dispatch(orderRecipes(e.target.value));
+      setOrder(e.target.value);
+      setCurrentPage(1);
+    }
   };
 
   const handleOrderHealth = (e) => {
@@ -59,6 +72,7 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
       <button onClick={() => window.location.reload()} className="refresh">
         Refresh
       </button>
+
       <form className="search-form-container" onSubmit={(e) => handleSubmit(e)}>
         <input
           className="input"
@@ -74,6 +88,7 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
           disabled={!input || /\s/g.test(input) ? true : false}
         />
       </form>
+
       <select onChange={(e) => handleOrderHealth(e)} className="menu-order-health">
         <option value="random">Order Health</option>
         <option value="H-L">High - Low</option>

@@ -27,7 +27,7 @@ const rootReducer = (state = initialState, action) => {
     case GET_RECIPE_NAME:
       return {
         ...state,
-        recipesOriginal: action.payload
+        recipes: action.payload
       };
     case GET_RECIPE_DETAIL:
       return {

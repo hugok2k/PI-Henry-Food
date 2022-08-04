@@ -28,7 +28,7 @@ module.exports = (sequelize) => {
       },
       image: {
         type: DataTypes.STRING,
-        defaultValue: 'https://via.placeholder.com/312x231'
+        defaultValue: 'https://cutt.ly/VZcVXeE'
       }
     },
     { timestamps: false }

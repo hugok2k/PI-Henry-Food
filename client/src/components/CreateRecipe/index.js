@@ -135,7 +135,7 @@ export default function CreateRecipe() {
             onBlur={() => validate(input)}
           />
           <span className="error-message-setps">{!validSteps && 'REQUIRED'}</span>
-          {!validSteps || !validName || !validSummary || !input.title ? (
+          {!input.name || !validSteps || !validName || !validSummary ? (
             <button className="btnDisabled" disabled>
               Submit
             </button>

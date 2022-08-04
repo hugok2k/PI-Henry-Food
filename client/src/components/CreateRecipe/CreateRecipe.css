@@ -101,31 +101,6 @@
   transition: 0.3s;
 }
 
-.error-message,
-.error-message-summary,
-.error-message-diets,
-.error-message-setps {
-  font-size: 14px;
-  position: absolute;
-  color: red;
-}
-.error-message {
-  margin-bottom: 940px;
-  margin-right: 100px;
-}
-.error-message-summary {
-  margin-bottom: 534px;
-  margin-right: 134px;
-}
-.error-message-diets {
-  margin-top: 388px;
-  margin-right: 210px;
-}
-.error-message-setps {
-  margin-top: 774px;
-  margin-right: 210px;
-}
-
 .btnDisabled {
   width: 80px;
   height: 100%;
@@ -136,6 +111,32 @@
   background-color: rgb(197, 197, 197);
   padding: 8px 10px;
   border-radius: 4px;
+  margin: 14px 0px 7px 0px;
+}
+
+.error-message,
+.error-message-summary,
+.error-message-diets,
+.error-message-setps {
+  font-size: 14px;
+  position: absolute;
+  color: red;
+}
+.error-message {
+  margin-bottom: 960px;
+  margin-right: 100px;
+}
+.error-message-summary {
+  margin-bottom: 554px;
+  margin-right: 134px;
+}
+.error-message-diets {
+  margin-top: 388px;
+  margin-right: 210px;
+}
+.error-message-setps {
+  margin-top: 754px;
+  margin-right: 210px;
 }
 
 .btn-back-form {

@@ -98,7 +98,7 @@ export default function CreateRecipe() {
             name="summary"
             value={input.summary}
             type="text"
-            placeholder="Summary of recipe"
+            placeholder="Summary of recipe - 5 character or longer"
             onChange={(e) => handleChange(e)}
             onKeyUp={() => validate(input)}
             onBlur={() => validate(input)}
@@ -129,13 +129,13 @@ export default function CreateRecipe() {
             name="steps"
             value={input.steps}
             type="text"
-            placeholder="Steps of recipe"
+            placeholder="Steps of recipe - 5 character or longer"
             onChange={(e) => handleChange(e)}
             onKeyUp={() => validate(input)}
             onBlur={() => validate(input)}
           />
           <span className="error-message-setps">{!validSteps && 'REQUIRED'}</span>
-          {!validSteps || !validName || !validSummary ? (
+          {!validSteps || !validName || !validSummary || !input.title ? (
             <button className="btnDisabled" disabled>
               Submit
             </button>

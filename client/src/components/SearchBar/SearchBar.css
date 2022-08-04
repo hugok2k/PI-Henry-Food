@@ -37,6 +37,7 @@
   margin-right: 10px;
   background-color: var(--color-primary-900);
   transition: 0.3s;
+  cursor: pointer;
 }
 .refresh:hover {
   background-color: #fff;
@@ -113,6 +114,7 @@
   transition: 0.3s;
   text-align: center;
   margin-right: 8px;
+  cursor: pointer;
 }
 .create-recipe:hover,
 .menu-filter-recipe:hover,
@@ -121,6 +123,7 @@
   background: #fff;
   color: #000;
   transition: 0.3s;
+  cursor: pointer;
 }
 .btnsearch-hidden {
   width: 80px;

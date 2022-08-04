@@ -19,11 +19,18 @@
   border-radius: 4px;
   color: rgb(68, 68, 68);
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 .label-main {
   text-align: left;
   width: 400px;
   margin-bottom: 8px;
+}
+.label-main-steps {
+  text-align: left;
+  width: 400px;
+  margin-bottom: 8px;
+  margin-top: 32px;
 }
 .input-form-recipe {
   width: 400px;
@@ -57,7 +64,7 @@
   flex-wrap: wrap;
   width: 410px;
   height: 100px;
-  margin-bottom: 24px;
+  margin-bottom: 44px;
   margin-top: 8px;
 }
 .input-checkbox {
@@ -85,7 +92,9 @@
   border-radius: 4px;
   cursor: pointer;
   transition: 0.3s;
+  margin: 14px 0px 7px 0px;
 }
+
 .button-submit:hover {
   background: #fff;
   color: #000;
@@ -101,11 +110,11 @@
   color: red;
 }
 .error-message {
-  margin-bottom: 904px;
+  margin-bottom: 940px;
   margin-right: 100px;
 }
 .error-message-summary {
-  margin-bottom: 498px;
+  margin-bottom: 534px;
   margin-right: 134px;
 }
 .error-message-diets {
@@ -113,7 +122,7 @@
   margin-right: 210px;
 }
 .error-message-setps {
-  margin-top: 738px;
+  margin-top: 774px;
   margin-right: 210px;
 }
 
@@ -142,7 +151,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: 0.3s;
-  margin: 0px 0px 924px 445px;
+  margin: 0px 0px 1012px 445px;
 }
 
 .btn-back-form:hover {

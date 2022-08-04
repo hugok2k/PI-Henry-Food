@@ -13,15 +13,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-a {
-  text-decoration: none;
-}
-
-body {
+  overflow-x: hidden;
   background-color: var(--color-secondary-500);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+a {
+  text-decoration: none;
 }

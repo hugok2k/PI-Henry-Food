@@ -123,7 +123,7 @@ export default function CreateRecipe() {
               </div>
             ))}
           </div>
-          <label className="label-main">Steps:</label>
+          <label className="label-main-steps">Steps:</label>
           <input
             className="input-form-recipe"
             name="steps"

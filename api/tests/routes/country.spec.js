@@ -17,7 +17,7 @@ const objPost = {
   diets: ['vegetarian', 'gluten free', 'vegan', 'primal']
 };
 
-describe('Recipe routes', () => {
+xdescribe('Recipe routes', () => {
   before(() =>
     conn.authenticate().catch((err) => {
       console.error('Unable to connect to the database:', err);
@@ -37,5 +37,6 @@ describe('Recipe routes', () => {
   });
   describe('\n --- PROBANDO RUTA QUERY /recipes?=name \n', () => {
     it('should get 200', () => agent.get('/api/recipes?name=Milanesa').expect(200));
+    it('should get 404', () => agent.get('/api/recipes?name=mono99a').expect(404));
   });
 });

@@ -75,7 +75,7 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
         <option value="Z-A">Z-A</option>
       </select>
       <button onClick={() => window.location.reload()} className="refresh">
-        Refresh
+        Reset
       </button>
 
       <form className="search-form-container" onSubmit={(e) => handleSubmit(e)}>

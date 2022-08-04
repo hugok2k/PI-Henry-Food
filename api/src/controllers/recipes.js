@@ -2,38 +2,32 @@ const axios = require('axios');
 const { Recipe, Diet } = require('../db');
 const { API_KEY } = process.env;
 
-// Llamo a la API de Spoonacular y devuelvo un array con los resultados, solo con los campos que necesito.
-
 const getApiSpoon = (next) => {
-  return (
-    axios
-      // .get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
-      .get(`https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5`)
-      .then((apiSpoon) => {
-        const resultFilter = apiSpoon.data.results.map((e) => {
-          return {
-            id: e.id,
-            name: e.title,
-            summary: e.summary,
-            image: e.image,
-            healthScore: e.healthScore,
-            steps: e.analyzedInstructions[0]?.steps.map((e) => {
-              return {
-                number: e.number,
-                step: e.step
-              };
-            }),
-            diets: e.diets
-          };
-        });
-        return resultFilter;
-      })
-      .catch((error) => {
-        next(error);
-      })
-  );
+  return axios
+    .get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
+    .then((apiSpoon) => {
+      const resultFilter = apiSpoon.data.results.map((e) => {
+        return {
+          id: e.id,
+          name: e.title,
+          summary: e.summary,
+          image: e.image,
+          healthScore: e.healthScore,
+          steps: e.analyzedInstructions[0]?.steps.map((e) => {
+            return {
+              number: e.number,
+              step: e.step
+            };
+          }),
+          diets: e.diets
+        };
+      });
+      return resultFilter;
+    })
+    .catch((error) => {
+      next(error);
+    });
 };
-// Devuelvo un array con los resultados de la base de datos, solo con los campos que necesito.
 const getDbRecipes = async (next) => {
   try {
     const resultFind = await Recipe.findAll({
@@ -101,7 +95,6 @@ const getIdRecipes = async (id, next) => {
   }
 };
 
-// Concateno los resultados de API y DB en un array.
 const getConcat = async (next) => {
   const apiSpoon = await getApiSpoon(next);
   const dbRecipes = await getDbRecipes(next);

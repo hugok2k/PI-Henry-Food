@@ -62,19 +62,6 @@ export function orderHealthScore(data) {
   };
 }
 
-/* export function getListDiets() {
-  return async (dispatch) => {
-    axios
-      .get(`${axios.defaults.baseURL}/api/diets`)
-      .then((response) => {
-        return dispatch({ type: GET_LIST_DIETS, payload: response.data });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-} */
-
 export function getListDiets() {
   return (dispatch) => {
     fetch(`${axios.defaults.baseURL}/api/diets`)

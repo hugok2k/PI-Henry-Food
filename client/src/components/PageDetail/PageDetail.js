@@ -11,7 +11,9 @@ export default function PageDetail(props) {
 
   useEffect(() => {
     dispatch(getPageDetail(id));
-    dispatch(pageDetail());
+    return () => {
+      dispatch(pageDetail());
+    };
   }, [dispatch, id]);
 
   const handleDelete = () => {

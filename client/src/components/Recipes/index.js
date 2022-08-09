@@ -21,7 +21,7 @@ export default function Recipes() {
   useEffect(() => {
     dispatch(getAllRecipes());
   }, [dispatch]);
-  return recipes.length > 0 ? (
+  return recipes.length > 0 && recipes !== undefined ? (
     <>
       <div className="recipes-container">
         <SearchBar setCurrentPage={setCurrentPage} setOrder={setOrder} />

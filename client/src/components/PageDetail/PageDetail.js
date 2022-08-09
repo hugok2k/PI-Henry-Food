@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPageDetail, deleteRecipe } from '../../redux/actions';
+import { getPageDetail, deleteRecipe, pageDetail } from '../../redux/actions';
 import './PageDetail.css';
 import { useHistory } from 'react-router-dom';
 
@@ -11,7 +11,8 @@ export default function PageDetail(props) {
 
   useEffect(() => {
     dispatch(getPageDetail(id));
-  }, []);
+    dispatch(pageDetail());
+  }, [dispatch, id]);
 
   const handleDelete = () => {
     dispatch(deleteRecipe(id));

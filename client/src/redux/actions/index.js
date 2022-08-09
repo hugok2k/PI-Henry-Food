@@ -8,7 +8,8 @@ import {
   GET_LIST_DIETS,
   FILTER_DIETS,
   CREATE_RECIPE,
-  DELETE_RECIPE
+  DELETE_RECIPE,
+  PAGE_DETAIL
 } from './myconst';
 
 export function getAllRecipes() {
@@ -101,5 +102,12 @@ export function deleteRecipe(id) {
     } catch (error) {
       console.log(error);
     }
+  };
+}
+
+export function pageDetail(data = {}) {
+  return {
+    type: PAGE_DETAIL,
+    payload: data
   };
 }

@@ -6,7 +6,8 @@ import {
   ORDER_RECIPE,
   ORDER_HEALTH_SCORE,
   GET_LIST_DIETS,
-  FILTER_DIETS
+  FILTER_DIETS,
+  PAGE_DETAIL
 } from '../actions/myconst';
 
 const initialState = {
@@ -77,6 +78,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         recipes: action.payload === 'allDiets' ? filterRecipeVar : recipesFilter
+      };
+    case PAGE_DETAIL:
+      return {
+        ...state,
+        infoRecipes: action.payload
       };
     default:
       return state;

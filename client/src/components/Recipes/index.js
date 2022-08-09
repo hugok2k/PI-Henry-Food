@@ -21,7 +21,6 @@ export default function Recipes() {
   useEffect(() => {
     dispatch(getAllRecipes());
   }, [dispatch]);
-
   return recipes.length > 0 ? (
     <>
       <div className="recipes-container">

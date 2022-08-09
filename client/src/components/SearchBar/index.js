@@ -77,7 +77,6 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
       <button onClick={() => window.location.reload()} className="refresh">
         Reset
       </button>
-
       <form className="search-form-container" onSubmit={(e) => handleSubmit(e)}>
         <input
           className="input"
@@ -94,7 +93,7 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
         />
       </form>
 
-      <select onChange={(e) => handleOrderHealth(e)} className="menu-order-health">
+      <select selected="random" onChange={(e) => handleOrderHealth(e)} className="menu-order-health" option="Hola">
         <option value="random">Order Health</option>
         <option value="H-L">High - Low</option>
         <option value="L-H">Low - High</option>

@@ -7,3 +7,4 @@ export const ORDER_HEALTH_SCORE = 'ORDER_HEALTH_SCORE';
 export const GET_LIST_DIETS = 'GET_LIST_DIETS';
 export const FILTER_DIETS = 'FILTER_DIETS';
 export const DELETE_RECIPE = 'DELETE_RECIPE';
+export const PAGE_DETAIL = 'PAGE_DETAIL';

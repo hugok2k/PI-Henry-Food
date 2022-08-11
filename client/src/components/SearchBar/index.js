@@ -35,20 +35,10 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
     setCurrentPage(1);
   };
 
-  const handleOrder = (e) => {
-    if (e.target.value === 'orderR') {
-      dispatch(getAllRecipes());
-      setCurrentPage(1);
-    } else {
+  const handleOrderFilter = (e) => {
+    if (e.target.value === 'A-Z' || e.target.value === 'Z-A') {
       dispatch(orderRecipes(e.target.value));
       setOrder(e.target.value);
-      setCurrentPage(1);
-    }
-  };
-
-  const handleOrderHealth = (e) => {
-    if (e.target.value === 'random') {
-      dispatch(getAllRecipes());
       setCurrentPage(1);
     } else {
       dispatch(orderHealthScore(e.target.value));
@@ -69,10 +59,12 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
           Create Recipe
         </button>
       </Link>
-      <select onChange={(e) => handleOrder(e)} className="menu-order">
+      <select onChange={(e) => handleOrderFilter(e)} className="menu-order">
         <option value="orderR">Order</option>
         <option value="A-Z">A-Z</option>
         <option value="Z-A">Z-A</option>
+        <option value="H-L">High Health</option>
+        <option value="L-H">Low Health</option>
       </select>
       <button onClick={() => window.location.reload()} className="refresh">
         Reset
@@ -93,11 +85,6 @@ export default function SearchBar({ setCurrentPage, setOrder }) {
         />
       </form>
 
-      <select selected="random" onChange={(e) => handleOrderHealth(e)} className="menu-order-health" option="Hola">
-        <option value="random">Order Health</option>
-        <option value="H-L">High - Low</option>
-        <option value="L-H">Low - High</option>
-      </select>
       <select onChange={(e) => handleFilterDiets(e)} className="menu-filter-recipe">
         <option value="allDiets">All Diets</option>
         {lis.map((element) => (

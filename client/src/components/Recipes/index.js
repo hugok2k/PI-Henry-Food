@@ -25,12 +25,14 @@ export default function Recipes() {
     <>
       <div className="recipes-container">
         <SearchBar setCurrentPage={setCurrentPage} setOrder={setOrder} />
-        <Paginate
-          currentPage={currentPage}
-          paginate={paginate}
-          totalPages={totalPages}
-          setCurrentPage={setCurrentPage}
-        />
+        <div className="up-paginate-container">
+          <Paginate
+            currentPage={currentPage}
+            paginate={paginate}
+            totalPages={totalPages}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
         <div className="recipes-list">
           {currentPosts.map((e) => (
             <Recipe key={e.id} name={e.name} image={e.image} diets={e.diets} id={e.id} healthScore={e.healthScore} />

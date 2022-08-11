@@ -5,7 +5,6 @@ import Recipe from '../Recipe';
 import './Recipes.css';
 import { Paginate } from '../Paginate';
 import SearchBar from '../SearchBar';
-import { Link } from 'react-router-dom';
 
 export default function Recipes() {
   const dispatch = useDispatch();

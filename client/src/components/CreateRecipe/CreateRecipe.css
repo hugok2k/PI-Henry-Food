@@ -31,6 +31,7 @@
   width: 400px;
   margin-bottom: 8px;
   margin-top: 32px;
+  font-weight: 600;
 }
 .input-form-recipe {
   width: 400px;
@@ -158,4 +159,40 @@
 .btn-back-form:hover {
   background: #fff;
   color: #000;
+}
+
+@media (max-width: 550px) {
+  .create-recipe-main {
+    width: 355px;
+  }
+  .label-main {
+    width: 336px;
+  }
+  .input-form-recipe {
+    width: 325px;
+  }
+  .label-main-steps {
+    width: 336px;
+  }
+  .img-form {
+    width: 337px;
+  }
+  .select-diets-container {
+    width: 337px;
+  }
+  .btn-back-form {
+    margin: 0px 0px 971px 300px;
+  }
+  .error-message {
+    margin-bottom: 919px;
+    margin-right: 45px;
+  }
+  .error-message-summary {
+    margin-bottom: 514px;
+    margin-right: 83px;
+  }
+  .error-message-setps {
+    margin-top: 712px;
+    margin-right: 153px;
+  }
 }

@@ -8,11 +8,12 @@
 }
 
 .container-pagedetail {
-  width: 600px;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 100%;
+  justify-content: space-between;
   background-color: #fff;
   box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
   padding: 10px;
@@ -20,19 +21,7 @@
   margin-bottom: 20px;
   border-radius: 6px;
 }
-.container-pagedetail {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.container-diets {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 550px;
-  margin: 20px;
-}
+
 .btnDiets {
   width: 100px;
   height: 40px;
@@ -99,4 +88,35 @@
 .recipe-delete:hover {
   background: #fff;
   color: rgb(255, 0, 0);
+}
+
+.container-diets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 550px;
+  margin: 20px;
+}
+
+@media (max-width: 660px) {
+  .container-pagedetail {
+    width: 355px;
+  }
+  .image-page-detail {
+    width: 344px;
+    height: 225px;
+  }
+  .diets {
+    width: 307px;
+  }
+  .btn-back-card {
+    width: 307px;
+  }
+  .container-diets {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 307px;
+    min-height: 40px;
+    max-height: 82px;
+  }
 }

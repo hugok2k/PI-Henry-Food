@@ -5,6 +5,7 @@ import Recipe from '../Recipe';
 import './Recipes.css';
 import { Paginate } from '../Paginate';
 import SearchBar from '../SearchBar';
+import { Link } from 'react-router-dom';
 
 export default function Recipes() {
   const dispatch = useDispatch();
@@ -44,6 +45,17 @@ export default function Recipes() {
           totalPages={totalPages}
           setCurrentPage={setCurrentPage}
         />
+        <footer className="footer">
+          <span>Developed by Hugo Avila</span>
+          <div className="footer-icons">
+            <a href="https://github.com/hugok2k" target="_blank" rel="noopener noreferrer">
+              <span className="icon-github"></span>
+            </a>
+            <a href="https://www.linkedin.com/in/hugo-avila-9465a09/" target="_blank" rel="noopener noreferrer">
+              <span className="icon-linkedin"></span>
+            </a>
+          </div>
+        </footer>
       </div>
     </>
   ) : (

@@ -1,10 +1,8 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
+> [!CAUTION]
+> # PROYECTO DEPRECADO
 
-# Individual Project - Henry Food
-
-<p align="right">
-  <img height="200" src="./cooking.png" />
-</p>
+> [!IMPORTANT]
+> Este proyecto fue realizado por temas académicos, actualmente se encuentra desactualizado, no se recomienda su uso.
 
 ## Objetivos del Proyecto
 
